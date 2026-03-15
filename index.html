@@ -33,8 +33,14 @@
 <body>
     <div class="bg-texture"></div>
     <!-- Top Utility Bar -->
-    <div style="background: rgba(4, 1, 1, 0.95); padding: 8px 0; border-bottom: 1px solid rgba(197, 160, 89, 0.12); font-size: 0.7rem; position: relative; z-index: 1001;">
-        <div class="container utility-bar-items" style="display: flex; justify-content: flex-end; gap: 20px;">
+    <div class="utility-bar" style="background: rgba(4, 1, 1, 0.98); border-bottom: 1px solid rgba(197, 160, 89, 0.15); position: relative; z-index: 10001;">
+        <!-- Mobile Toggle -->
+        <div class="utility-bar-toggle" id="toggleUtility" style="display: none; justify-content: center; align-items: center; padding: 12px; color: var(--gold-mid); font-weight: 700; font-size: 0.75rem; cursor: pointer; text-transform: uppercase; letter-spacing: 1px;">
+            <span>Ecossistema Cidade Viva</span>
+            <i class="fa-solid fa-chevron-down" style="margin-left: 8px; font-size: 0.6rem; transition: transform 0.3s;"></i>
+        </div>
+        <!-- Items Container -->
+        <div class="container utility-bar-items" id="utilityItems" style="display: flex; justify-content: flex-end; gap: 20px;">
             <a href="https://cursos.ficv.edu.br/ciecc/?utm_source=ig&utm_medium=social" target="_blank" style="color: rgba(255,255,255,0.65); text-decoration: none; font-weight:500;">Congresso Internacional ECC 2026</a>
             <a href="https://cidadeviva.org/" target="_blank" style="color: rgba(255,255,255,0.65); text-decoration: none;">Igreja</a>
             <a href="https://ficv.edu.br/" target="_blank" style="color: rgba(255,255,255,0.65); text-decoration: none;">Faculdade</a>
@@ -271,7 +277,7 @@
             <p style="font-family: var(--font-serif); font-style: italic; color: var(--gold-mid); font-size: 1rem; margin-bottom: 25px; max-width: 600px; margin-inline: auto; opacity:0.85;">Respaldado pela solidez das principais redes acadêmicas e institucionais de Educação Cristã Clássica do Brasil.</p>
             
             <!-- Grid de Redes e Instituições de Apoio -->
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 15px; max-width: 980px; margin: 0 auto; text-align: left;">
+            <div class="mobile-slider" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 15px; max-width: 980px; margin: 0 auto; text-align: left;">
                 
                 <!-- Card 1 -->
                 <div class="glass-card" style="padding: 15px; background: rgba(255,255,255,0.02); border-color: rgba(197,160,89,0.08);">
@@ -370,7 +376,7 @@
                 <p class="section-subtitle">Gere valor posicional relevante para sua marca com benefícios voltados à reputação e comércio de alta patente.</p>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: var(--gap-sm); margin-top: 40px;">
+            <div class="mobile-slider" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: var(--gap-sm); margin-top: 40px;">
                 <!-- Card 1 -->
                 <div class="glass-card" style="padding: 22px; border-color: rgba(197,160,89,0.08);">
                     <i class="fa-solid fa-medal" style="font-size: 1.4rem; color: var(--gold-mid); margin-bottom: 12px; display:block;"></i>
@@ -467,7 +473,7 @@
                 <p class="section-subtitle">Posicione sua marca no epicentro de decisões acadêmicas com planos de alta conversão.</p>
             </div>
 
-            <div class="cotas-grid">
+            <div class="cotas-grid mobile-slider">
                 <!-- Cota Bronze -->
                 <div class="cota-card glass-card">
                     <div style="font-size:0.75rem; color:var(--gold-mid); text-transform:uppercase; letter-spacing:1px; margin-bottom:4px;">Perfil: Entrada Estratégica</div>
@@ -629,7 +635,7 @@
 
     <!-- 13. FOOTER EXECUTIVO -->
     <footer style="background: #060101; padding: 50px 0 20px 0; border-top: 1px solid rgba(197,160,89,0.06); text-align: left; position: relative; z-index: 2;">
-        <div class="container" style="display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: var(--gap-md); align-items: start;">
+        <div class="container footer-grid">
             <div>
                 <img src="https://cursos.ficv.edu.br/wp-content/uploads/2025/12/LOGO-II-CONGRESSO-ECC-BRANCO.webp" alt="II Congresso CIECC" style="max-height: 55px; width: auto; object-fit: contain; margin-bottom: 15px; display: block; filter: brightness(1.2);">
                 <p style="font-size: 0.78rem; color: var(--gold-highlight); opacity: 0.6; max-width: 280px; line-height: 1.5;">Promovendo a excelência acadêmica fundamentada na tradição cristã clássica.</p>
@@ -661,6 +667,38 @@
         </div>
     </section>
 
+    <!-- Bottom Nav Bar para Mobile -->
+    <div class="bottom-nav">
+        <a href="#dashboard" class="nav-item">
+            <i class="fa-solid fa-chart-pie"></i>
+            <span>Impacto</span>
+        </a>
+        <a href="#cotas" class="nav-item">
+            <i class="fa-solid fa-medal"></i>
+            <span>Cotas</span>
+        </a>
+        <a href="#contato" class="nav-item btn-cta-nav">
+            <i class="fa-solid fa-file-signature"></i>
+            <span>Garantir</span>
+        </a>
+        <a href="https://wa.me/5583981957737?text=Olá!%20Já%20conheço%20o%20Mídia%20Kit%20e%20gostaria%20de%20falar%20com%20o%20comercial." target="_blank" class="nav-item whatsapp-nav">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>Falar</span>
+        </a>
+    </div>
+
     <script src="js/main.js"></script>
+    <script>
+        document.getElementById('toggleUtility').addEventListener('click', function() {
+            var items = document.getElementById('utilityItems');
+            var icon = this.querySelector('i');
+            items.classList.toggle('active');
+            if (items.classList.contains('active')) {
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                icon.style.transform = 'rotate(0deg)';
+            }
+        });
+    </script>
 </body>
 </html>

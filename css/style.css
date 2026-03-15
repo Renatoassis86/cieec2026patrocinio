@@ -391,5 +391,194 @@ select.form-input {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
-  . c o t a - v a l u e   {   w h i t e - s p a c e :   n o w r a p ;   }    
- 
+
+/* --- ESTILOS MOBILE-FIRST / CARROSSEL SLIDERS --- */
+@media (max-width: 768px) {
+  /* Sliders Horizontais */
+  .mobile-slider {
+    display: flex !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    gap: 20px !important;
+    padding: 15px calc(var(--gap-md)) 25px !important;
+    margin-left: calc(-1 * var(--gap-md)) !important;
+    margin-right: calc(-1 * var(--gap-md)) !important;
+    grid-template-columns: none !important;
+    scrollbar-width: none;
+  }
+  .mobile-slider::-webkit-scrollbar { display: none; }
+  .mobile-slider > * { flex: 0 0 calc(85% - var(--gap-sm)) !important; scroll-snap-align: start !important; max-width: none !important; }
+  .glass-card:hover { transform: none !important; }
+  body { padding-bottom: 75px !important; }
+  .bottom-nav {
+    display: flex !important;
+    position: fixed;
+    bottom: 0; left: 0; width: 100%; height: 65px;
+    background: rgba(11, 1, 2, 0.96);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(197, 160, 89, 0.25);
+    z-index: 10000;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 0;
+    box-shadow: 0 -4px 15px rgba(0,0,0,0.8);
+  }
+  .nav-item { display: flex; flex-direction: column; align-items: center; color: var(--gold-mid); text-decoration: none; font-size: 0.65rem; font-weight: 600; gap: 4px; }
+  .nav-item i { font-size: 1.15rem; }
+  .nav-item:active { color: var(--gold-light); }
+  .btn-cta-nav { background: var(--grad-gold); color: #000 !important; padding: 8px 14px; border-radius: 4px; font-weight: 800; }
+  .whatsapp-nav { color: #25D366 !important; }
+}
+@media (min-width: 769px) { .bottom-nav { display: none; } }
+
+
+/* --- BLOQUEAR SCROLL LATERAL GLOBAMENTE --- */
+html, body {
+  overflow-x: hidden !important;
+  width: 100% !important;
+  position: relative !important;
+}
+
+section {
+  overflow-x: hidden !important; /* Previne vazamento de elementos */
+}
+
+/* --- FOOTER RESPONSIVO (DESKTOP) --- */
+@media (min-width: 769px) {
+  .footer-grid {
+    display: grid !important;
+    grid-template-columns: 1.5fr 1fr 1fr !important;
+    gap: 40px !important;
+    align-items: start !important;
+  }
+}
+
+/* --- ADAPTATIONS FOR MOBILE EXPERIENCE --- */
+@media (max-width: 768px) {
+  /* 1. Barra Utilitária no Topo em Dropdown */
+  .utility-bar {
+    padding: 0 !important;
+  }
+  .utility-bar-toggle {
+    display: flex !important; /* Mostra no mobile */
+  }
+  .utility-bar-items {
+    display: none !important; /* Esconde por padrão no mobile */
+    flex-direction: column !important;
+    gap: 0 !important;
+    padding: 0 !important;
+    background: rgba(4, 1, 1, 0.98) !important;
+    width: 100% !important;
+    border-top: 1px solid rgba(197, 160, 89, 0.1) !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .utility-bar-items.active {
+    display: flex !important; /* Mostra ao clicar */
+  }
+  .utility-bar-items a {
+    padding: 14px 20px !important;
+    color: #FFF !important;
+    border-bottom: 1px solid rgba(197, 160, 89, 0.05) !important;
+    font-size: 0.75rem !important;
+    font-weight: 600 !important;
+    width: 100% !important;
+    text-align: left !important;
+    white-space: normal !important;
+    display: block !important;
+  }
+  .utility-bar-items a:last-child {
+    border-bottom: none !important;
+  }
+
+  /* 2. Header (Posicionamento e Layout) */
+  header {
+    position: relative !important;
+    top: 0 !important;
+    background: rgba(11, 2, 2, 0.95) !important;
+    padding: 15px 0 !important;
+    border-bottom: 1px solid rgba(197, 160, 89, 0.15) !important;
+    z-index: 1000 !important;
+  }
+
+  /* 3. Hero Section e Transições */
+  .hero-section {
+    padding-top: 50px !important;
+    min-height: auto !important;
+    padding-bottom: 60px !important;
+    position: relative !important;
+  }
+  .hero-section::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 0 !important; left: 0 !important;
+    width: 100% !important; height: 120px !important;
+    background: linear-gradient(to bottom, rgba(9, 2, 2, 0) 0%, rgba(9, 2, 2, 1) 100%) !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+  }
+  .hero-section .container {
+    position: relative !important;
+    z-index: 2 !important;
+  }
+
+  /* 4. Divisores e Spacing Entre Seções */
+  section { 
+    padding: 35px 0 !important; 
+    border-bottom: 1px solid rgba(197, 160, 89, 0.08) !important;
+  }
+
+  /* 5. Rodapé Responsivo */
+  .footer-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 35px !important;
+    text-align: center !important;
+    align-items: center !important;
+  }
+  .footer-grid > div { 
+    display: flex !important; 
+    flex-direction: column !important; 
+    align-items: center !important; 
+    text-align: center !important; 
+  }
+
+  /* 6. Sessão CTA Final */
+  .cta-final-section {
+    padding: 30px 0 !important;
+  }
+  .cta-final-section h2 {
+    font-size: 1.7rem !important;
+    line-height: 1.2 !important;
+    margin-bottom: 12px !important;
+  }
+  .cta-final-section p {
+    font-size: 0.85rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 20px !important;
+  }
+  .cta-final-section .glass-card {
+    padding: 25px 15px !important;
+  }
+  .cta-final-section .btn {
+    padding: 12px 18px !important;
+    font-size: 0.82rem !important;
+    width: 100% !important;
+    max-width: 320px !important;
+    display: inline-flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 8px !important;
+  }
+  .cta-final-section .btn i {
+    font-size: 1.1rem !important;
+  }
+
+  /* 7. Uniformidade Slider */
+  .mobile-slider > * {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    height: auto !important;
+  }
+}
