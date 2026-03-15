@@ -265,7 +265,7 @@ header {
 .cota-card { padding: var(--gap-lg); text-align: center; position: relative; }
 .cota-card.gold-border { border-color: var(--gold-mid); background: radial-gradient(circle at top right, rgba(197, 160, 89, 0.08), transparent); }
 .cota-name { font-size: 1.6rem; color: #FFF; font-weight: 700; font-family: var(--font-heading); }
-.cota-value { font-size: 2.7rem; font-family: var(--font-body); font-weight: 800; color: var(--gold-light); margin: 12px 0; }
+.cota-value { font-size: 2.15rem; font-family: var(--font-body); font-weight: 800; color: var(--gold-light); margin: 12px 0; white-space: nowrap !important; }
 
 /* 10. Comparativo */
 table { width: 100%; border-collapse: collapse; background: rgba(0,0,0,0.4); border-radius: var(--border-radius-md); overflow: hidden; border: 1px solid rgba(197, 160, 89, 0.08); }
