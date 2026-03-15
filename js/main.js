@@ -15,26 +15,31 @@ const animateCounter = (counter) => {
   }
 };
 
-const observerOptions = { threshold: 0.5 };
+const observerOptions = { threshold: 0.3 };
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      if (entry.target.classList.contains('dashboard-card')) {
-        const number = entry.target.querySelector('.stat-number');
-        if (number && (number.innerText === '0' || number.innerText === '')) animateCounter(number);
-      } else {
-        entry.target.classList.add('visible');
+      // Se for contador
+      if (entry.target.classList.contains('stat-number')) {
+        if (entry.target.innerText === '0' || entry.target.innerText === '') {
+          animateCounter(entry.target);
+        }
+      }
+      // Se for Barra de Progresso
+      if (entry.target.classList.contains('progress-bar-fill')) {
+        const targetWidth = entry.target.getAttribute('data-width');
+        entry.target.style.width = targetWidth;
       }
     }
   });
 }, observerOptions);
 
-document.querySelectorAll('.dashboard-card').forEach(card => observer.observe(card));
+document.querySelectorAll('.stat-number, .progress-bar-fill').forEach(el => observer.observe(el));
 
 const revealElements = document.querySelectorAll('section');
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active-section'); });
-}, { threshold: 0.2 });
+}, { threshold: 0.15 });
 
 revealElements.forEach(el => revealObserver.observe(el));
 

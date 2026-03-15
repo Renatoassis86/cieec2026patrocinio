@@ -15,9 +15,19 @@
 </head>
 <body>
     <div class="bg-texture"></div>
+    <!-- Top Utility Bar -->
+    <div style="background: rgba(4, 1, 1, 0.95); padding: 8px 0; border-bottom: 1px solid rgba(197, 160, 89, 0.12); font-size: 0.7rem; position: relative; z-index: 1001;">
+        <div class="container" style="display: flex; justify-content: flex-end; gap: 20px;">
+            <a href="https://cursos.ficv.edu.br/ciecc/?utm_source=ig&utm_medium=social" target="_blank" style="color: rgba(255,255,255,0.65); text-decoration: none; font-weight:500;">Congresso Internacional ECC 2026</a>
+            <a href="https://cidadeviva.org/" target="_blank" style="color: rgba(255,255,255,0.65); text-decoration: none;">Igreja</a>
+            <a href="https://ficv.edu.br/" target="_blank" style="color: rgba(255,255,255,0.65); text-decoration: none;">Faculdade</a>
+            <a href="https://escolacidadeviva.org/" target="_blank" style="color: rgba(255,255,255,0.65); text-decoration: none;">Escola</a>
+            <a href="https://cidadeviva.education/" target="_blank" style="color: rgba(255,255,255,0.65); text-decoration: none;">Education</a>
+        </div>
+    </div>
 
     <!-- Header / Navbar -->
-    <header>
+    <header style="top: 33px;">
         <div class="container nav-container">
             <div>
                 <img src="https://cursos.ficv.edu.br/wp-content/uploads/2025/12/LOGO-II-CONGRESSO-ECC-BRANCO.webp" style="height: 42px; filter: brightness(1.2); width: auto; object-fit: contain;" alt="II Congresso CIECC">
@@ -27,9 +37,13 @@
     </header>
 
     <!-- 1. HERO PRINCIPAL -->
-    <section class="hero-section" style="background-image: linear-gradient(rgba(11, 1, 2, 0.75), rgba(11, 1, 2, 0.92)), url('imagens/hero-bg.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
+    <section class="hero-section" style="background-image: linear-gradient(rgba(11, 1, 2, 0.75), rgba(11, 1, 2, 0.92)), url('imagens/hero-bg.jpg'); background-size: cover; background-position: center; background-attachment: fixed; padding-top: 120px;">
         <div class="container hero-content">
-            <span class="section-tag" style="animation: opacityShow 1s ease;">Plataforma Nacional de Influência</span>
+            <!-- Hook Hook Frase -->
+            <p style="font-family: var(--font-serif); font-size: 1.28rem; font-style: italic; color: var(--gold-mid); margin-bottom: 25px; text-shadow: 0 2px 8px rgba(0,0,0,0.8); max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.4; opacity: 0.95;">
+                “Há marcas que apenas aparecem. E há marcas que passam a fazer parte de um movimento.”
+            </p>
+            <span class="section-tag" style="font-size: 0.65rem; padding: 4px 14px;">Plataforma Nacional de Influência</span>
             <h1 class="hero-title">
                 <span class="text-gradient">Mais que um Evento.</span><br>
                 Um Ecossistema de Valor.
@@ -51,115 +65,167 @@
         </div>
     </section>
 
-    <!-- 2. DASHBOARD INSTITUCIONAL DE IMPACTO (DIVIDIDO 2025 VS 2026) -->
-    <section class="dashboard-section" id="dashboard">
+    <!-- 2. DASHBOARD INSTITUCIONAL DE IMPACTO -->
+    <section class="dashboard-section" id="dashboard" style="background-image: linear-gradient(rgba(11,2,2,0.92), rgba(11,2,2,0.98)); position:relative; overflow:hidden;">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Densidade & Alcance</span>
-                <h2 class="section-title">Resultados Provados & <span class="text-gradient">Expansão</span></h2>
-                <p class="section-subtitle">A primeira edição comprovou força e densidade local e digital. 2026 projeta crescimento qualificado, não apenas repetição.</p>
+                <span class="section-tag">Resultados & Alcance</span>
+                <h2 class="section-title">Evidências que <span class="text-gradient">Falam por Si</span></h2>
+                <p class="section-subtitle">O poder de trção do nosso ecossistema em métricas transparentes e robustas de escala.</p>
             </div>
 
-            <!-- BI Dashboard Grid -->
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 15px; margin-bottom: 25px;">
+            <!-- ROW 1: RESULTADOS 2025 (MAPA + AUDIENCIA) -->
+            <div style="display: grid; grid-template-columns: 1fr 1.1fr; gap: 30px; margin-bottom: 40px; align-items: start;">
                 
-                <!-- Card 1: INGRESSOS (Escala Comprovada) -->
-                <div class="glass-card" style="padding: 20px; border-color: rgba(197,160,89,0.12); background: linear-gradient(135deg, rgba(128,0,0,0.12), transparent);">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-                        <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1px; color: var(--gold-mid); font-weight: 600;">Inscritos 2025</span>
-                        <i class="fa-solid fa-users" style="color: var(--gold-mid); font-size: 1rem;"></i>
+                <!-- Left: MAPA DO BRASIL E KPIS -->
+                <div class="glass-card" style="padding:25px; border-color: rgba(197,160,89,0.15); position:relative; min-height:360px; background: rgba(0,0,0,0.35); overflow:hidden;">
+                    <div style="font-size: 0.8rem; color: var(--gold-mid); text-transform: uppercase; font-weight: 700; margin-bottom: 15px; letter-spacing:1px;">
+                        <i class="fa-solid fa-earth-americas"></i> Expansão Geográfica (2025)
                     </div>
-                    <div class="stat-number" data-target="1492" style="font-size: 2.5rem; font-weight: 800; color: #FFF; margin-bottom: 8px;">0</div>
                     
-                    <!-- Barra de Proporção -->
-                    <div style="display: flex; height: 5px; border-radius: 3px; overflow: hidden; background: rgba(255,255,255,0.05); margin-bottom: 10px;">
-                        <div style="width: 37%; background: var(--gold-mid);" title="Presencial"></div>
-                        <div style="width: 63%; background: #9c2a38;" title="Online"></div>
+                    <!-- SVG Silhouette Map overlay -->
+                    <div style="position:absolute; top:35px; right:-20px; opacity:0.1; width:280px; pointer-events:none;">
+                        <img src="https://simplemaps.com/static/svg/br/br.svg" style="width:100%; filter: invert(0.9) sepia(0.5);" alt="Mapa do Brasil">
                     </div>
-                    <div style="display: flex; justify-content: space-between; font-size: 0.65rem; color: rgba(255,255,255,0.6);">
-                        <span><i class="fa-solid fa-circle" style="font-size: 0.45rem; color: var(--gold-mid); margin-right: 4px;"></i> 559 Presencial</span>
-                        <span><i class="fa-solid fa-circle" style="font-size: 0.45rem; color: #9c2a38; margin-right: 4px;"></i> 933 Online</span>
+
+                    <div style="position:relative; z-index:2;">
+                        <!-- GIANT NUMBERS -->
+                        <div style="display: flex; gap: 40px; margin-bottom: 30px; margin-top:20px;">
+                            <div>
+                                <div class="stat-number" data-target="25" style="font-size: 5rem; font-weight: 800; color: #FFF; line-height: 0.9; font-family:var(--font-heading);">0</div>
+                                <div style="font-size: 0.85rem; color: var(--gold-mid); font-weight:600; text-transform:uppercase; letter-spacing:0.5px; opacity:0.9;">Estados</div>
+                            </div>
+                            <div>
+                                <div class="stat-number" data-target="167" style="font-size: 5rem; font-weight: 800; color: #FFF; line-height: 0.9; font-family:var(--font-heading);">0</div>
+                                <div style="font-size: 0.85rem; color: var(--gold-mid); font-weight:600; text-transform:uppercase; letter-spacing:0.5px; opacity:0.9;">Cidades</div>
+                            </div>
+                        </div>
+
+                        <p style="font-size: 0.88rem; color: var(--gold-highlight); opacity: 0.8; max-width: 320px; line-height: 1.6; margin-bottom: 25px;">
+                            Presença consolidada nos maiores centros urbanos e em todo o ecossistema federativo nacional.Capilaridade de rede que acelera conexões.
+                        </p>
+
+                        <!-- OUTROS KPIS 2025 -->
+                        <div style="display: flex; gap: 15px;">
+                            <div style="background: rgba(255,255,255,0.03); padding: 15px; border-radius: 6px; flex: 1; border: 1px solid rgba(197,160,89,0.06);">
+                                <div class="stat-number" data-target="1492" style="font-size: 1.8rem; font-weight: 800; color: #FFF; font-family:var(--font-heading);">0</div>
+                                <div style="font-size: 0.65rem; opacity: 0.6; text-transform:uppercase;">Inscritos Totais</div>
+                            </div>
+                            <div style="background: rgba(255,255,255,0.03); padding: 15px; border-radius: 6px; flex: 1; border: 1px solid rgba(197,160,89,0.06);">
+                                <div class="stat-number" data-target="51000" style="font-size: 1.8rem; font-weight: 800; color: #FFF; font-family:var(--font-heading);">0</div>
+                                <div style="font-size: 0.65rem; opacity: 0.6; text-transform:uppercase;">Alunos na Rede</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Card 2: CAPILARIDADE BRASIL -->
-                <div class="glass-card" style="padding: 20px; border-color: rgba(197,160,89,0.1); background: rgba(0,0,0,0.2);">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-                        <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1px; color: var(--gold-mid); font-weight: 600;">Presença Nacional</span>
-                        <i class="fa-solid fa-earth-americas" style="color: var(--gold-mid); font-size: 1rem;"></i>
+                <!-- Right: DISTRIBUIÇÃO DE AUDIÊNCIA (Movic Bars) -->
+                <div class="glass-card" style="padding:25px; border-color: rgba(197,160,89,0.15); background: rgba(0,0,0,0.35);">
+                    <div style="font-size: 0.8rem; color: var(--gold-mid); text-transform: uppercase; font-weight: 700; margin-bottom: 20px; letter-spacing:1px;">
+                        <i class="fa-solid fa-chart-bar"></i> Distribuição por Tipo de Inscrição
                     </div>
-                    <div style="display: flex; align-items: baseline; gap: 8px;">
-                        <div class="stat-number" data-target="167" style="font-size: 2.5rem; font-weight: 800; color: #FFF;">0</div>
-                        <span style="font-size: 0.8rem; opacity: 0.5;">Cidades</span>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 14px;">
+                        <!-- Professores -->
+                        <div>
+                            <div style="display:flex; justify-content:space-between; font-size: 0.78rem; margin-bottom:4px; font-weight:500;">
+                                <span>Professores Externos</span> <span style="font-weight:800; color:var(--gold-light);">368</span>
+                            </div>
+                            <div style="height: 10px; background: rgba(0,0,0,0.3); border-radius: 5px; overflow:hidden; border:1px solid rgba(255,255,255,0.03);">
+                                <div class="progress-bar-fill" style="width: 0%; height: 100%; background: linear-gradient(90deg, var(--gold-mid), var(--gold-light)); border-radius:5px; transition: width 1.2s cubic-bezier(0.1, 1, 0.1, 1);" data-width="85%"></div>
+                            </div>
+                        </div>
+                        <!-- Alunos FICV -->
+                        <div>
+                            <div style="display:flex; justify-content:space-between; font-size: 0.78rem; margin-bottom:4px; font-weight:500;">
+                                <span>Alunos da FICV</span> <span style="font-weight:800; color:var(--gold-light);">296</span>
+                            </div>
+                            <div style="height: 10px; background: rgba(0,0,0,0.3); border-radius: 5px; overflow:hidden; border:1px solid rgba(255,255,255,0.03);">
+                                <div class="progress-bar-fill" style="width: 0%; height: 100%; background: linear-gradient(90deg, var(--gold-mid), var(--gold-light)); border-radius:5px; transition: width 1.2s cubic-bezier(0.1, 1, 0.1, 1);" data-width="72%"></div>
+                            </div>
+                        </div>
+                        <!-- Famílias -->
+                        <div>
+                            <div style="display:flex; justify-content:space-between; font-size: 0.78rem; margin-bottom:4px; font-weight:500;">
+                                <span>Famílias Educadoras</span> <span style="font-weight:800; color:var(--gold-light);">203</span>
+                            </div>
+                            <div style="height: 10px; background: rgba(0,0,0,0.3); border-radius: 5px; overflow:hidden; border:1px solid rgba(255,255,255,0.03);">
+                                <div class="progress-bar-fill" style="width: 0%; height: 100%; background: linear-gradient(90deg, var(--gold-mid), var(--gold-light)); border-radius:5px; transition: width 1.2s cubic-bezier(0.1, 1, 0.1, 1);" data-width="50%"></div>
+                            </div>
+                        </div>
+                        <!-- Colaboradores -->
+                        <div>
+                            <div style="display:flex; justify-content:space-between; font-size: 0.78rem; margin-bottom:4px; font-weight:500;">
+                                <span>Colaboradores do Sistema CV</span> <span style="font-weight:800; color:var(--gold-light);">128</span>
+                            </div>
+                            <div style="height: 10px; background: rgba(0,0,0,0.3); border-radius: 5px; overflow:hidden; border:1px solid rgba(255,255,255,0.03);">
+                                <div class="progress-bar-fill" style="width: 0%; height: 100%; background: linear-gradient(90deg, var(--gold-mid), var(--gold-light)); border-radius:5px; transition: width 1.2s cubic-bezier(0.1, 1, 0.1, 1);" data-width="32%"></div>
+                            </div>
+                        </div>
+                        <!-- Coordenadores/Lideranças mini -->
+                        <div>
+                            <div style="display:flex; justify-content:space-between; font-size: 0.78rem; margin-bottom:4px; font-weight:500;">
+                                <span>Diretores, Gestores e Mantenedores</span> <span style="font-weight:800; color:var(--gold-light);">185</span>
+                            </div>
+                            <div style="height: 10px; background: rgba(0,0,0,0.3); border-radius: 5px; overflow:hidden; border:1px solid rgba(255,255,255,0.03);">
+                                <div class="progress-bar-fill" style="width: 0%; height: 100%; background: linear-gradient(90deg, var(--gold-mid), var(--gold-light)); border-radius:5px; transition: width 1.2s cubic-bezier(0.1, 1, 0.1, 1);" data-width="45%"></div>
+                            </div>
+                        </div>
                     </div>
-                    <div style="margin-top: 5px;">
-                        <div class="stat-number" data-target="25" style="font-size: 1.2rem; font-weight: 600; color: var(--gold-light);">0</div>
-                        <div style="font-size: 0.65rem; color: var(--gold-mid); opacity: 0.7; margin-top: 2px;">Estados Alcançados</div>
-                    </div>
-                    <!-- Micro Graph SVG Sparkline -->
-                    <svg style="width: 100%; height: 18px; margin-top: 8px;" viewBox="0 0 100 20">
-                        <path d="M0,15 L20,13 L40,14 L60,8 L80,5 L100,2" fill="none" stroke="var(--gold-mid)" stroke-width="2" opacity="0.6"/>
-                    </svg>
-                </div>
-
-                <!-- Card 3: VOLUME COMERCIAL -->
-                <div class="glass-card" style="padding: 20px; border-color: rgba(197,160,89,0.1); background: rgba(0,0,0,0.2);">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-                        <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1px; color: var(--gold-mid); font-weight: 600;">Ecossistema</span>
-                        <i class="fa-solid fa-graduation-cap" style="color: var(--gold-mid); font-size: 1rem;"></i>
-                    </div>
-                    <div style="display: flex; align-items: baseline; gap: 8px;">
-                        <div class="stat-number" data-target="136" style="font-size: 2.5rem; font-weight: 800; color: #FFF;">0</div>
-                        <span style="font-size: 0.8rem; opacity: 0.5;">Escolas</span>
-                    </div>
-                    <div style="margin-top: 5px; border-top: 1px solid rgba(255,255,255,0.03); padding-top: 5px;">
-                        <div class="stat-number" data-target="51000" style="font-size: 1.2rem; font-weight: 700; color: var(--gold-light);">0</div>
-                        <div style="font-size: 0.65rem; color: var(--gold-mid); opacity: 0.7;">Alunos com Impacto Indireto</div>
-                    </div>
-                </div>
-
-                <!-- Card 4: DECISORES -->
-                <div class="glass-card" style="padding: 20px; border-color: rgba(197,160,89,0.12); background: linear-gradient(315deg, rgba(197,160,89,0.04), transparent);">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-                        <span style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1px; color: var(--gold-mid); font-weight: 600;">Decisores</span>
-                        <i class="fa-solid fa-address-card" style="color: var(--gold-mid); font-size: 1rem;"></i>
-                    </div>
-                    <div class="stat-number" data-target="200" style="font-size: 2.5rem; font-weight: 800; color: #FFF; margin-bottom: 8px;">0</div>
-                    <p style="font-size: 0.65rem; color: rgba(255,255,255,0.6); line-height: 1.4;">Lideranças escolares de alto escalão (Diretores e Gestores).</p>
-                    <div style="margin-top: 10px; font-size: 0.65rem; color: var(--gold-mid); font-weight: 500;"><i class="fa-solid fa-check" style="margin-right:3px;"></i> Autoridade comprovada.</div>
                 </div>
             </div>
 
-            <!-- PROJEÇÃO TERMÔMETRO 2026 -->
-            <div class="glass-card" style="padding: 25px; border-color: var(--gold-mid); background: radial-gradient(ellipse at center, rgba(197, 160, 89, 0.04), rgba(0,0,0,0.3)); margin-top: 15px;">
-                <div style="text-align: center; margin-bottom: 18px;">
-                    <span style="font-size: 0.78rem; color: var(--gold-mid); text-transform: uppercase; letter-spacing: 2px; font-weight: 700;">
-                        <i class="fa-solid fa-arrow-trend-up" style="margin-right: 5px;"></i> Forecast de Marketing: São Paulo 2026
+            <!-- ROW 2: ENFASE EM DECISORES (PÚBLICO VALIOSO) -->
+            <div class="glass-card" style="padding: 35px; border-color: var(--gold-mid); background: radial-gradient(circle at center, rgba(128,0,0,0.18), transparent); text-align: center; margin-bottom: 40px; border-width: 1.5px;">
+                <div style="font-size: 0.8rem; color: var(--gold-mid); text-transform: uppercase; font-weight: 700; margin-bottom: 12px; letter-spacing: 2px;">
+                    <i class="fa-solid fa-crown"></i> Público Decisor de Alta Conversão
+                </div>
+                <h3 style="font-size: 2rem; font-weight: 800; color: #FFF; margin-bottom: 15px; font-family:var(--font-heading);">
+                    Poder de <span class="text-gradient">Decisão & Compra</span>
+                </h3>
+                <p style="font-size:0.9rem; color:var(--gold-highlight); opacity:0.85; max-width:600px; margin:0 auto 30px auto; line-height:1.6;">
+                    Líderes estratégicos que decidem compras, aprovam investimentos e guiam o futuro de dezenas de redes de ensino nacionais.
+                </p>
+
+                <div style="display: flex; justify-content: center; gap: 50px; align-items: center;">
+                    <div>
+                        <div class="stat-number" data-target="200" style="font-size: 5.5rem; font-weight: 900; color: var(--gold-light); text-shadow: 0 0 25px rgba(197,160,89,0.35); font-family:var(--font-heading); line-height:1;">0</div>
+                        <div style="font-size: 0.85rem; color: #FFF; font-weight: 700; text-transform: uppercase; letter-spacing:1px; margin-top:8px;">Lideranças Decisoras</div>
+                    </div>
+                    <div style="height: 70px; border-left: 1px solid rgba(197,160,89,0.25);"></div>
+                    <div>
+                        <div class="stat-number" data-target="136" style="font-size: 5.5rem; font-weight: 900; color: var(--gold-light); text-shadow: 0 0 25px rgba(197,160,89,0.35); font-family:var(--font-heading); line-height:1;">0</div>
+                        <div style="font-size: 0.85rem; color: #FFF; font-weight: 700; text-transform: uppercase; letter-spacing:1px; margin-top:8px;">Escolas Únicas</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ROW 3: PROJEÇÃO 2026 (CARDS DE METAS SIMPLES E FORTES) -->
+            <div>
+                <div style="text-align: center; margin-bottom: 25px;">
+                    <span style="font-size: 0.82rem; color: var(--gold-mid); text-transform: uppercase; letter-spacing: 2px; font-weight: 700;">
+                        <i class="fa-solid fa-arrow-trend-up" style="margin-right:5px;"></i> Forecast de Crescimento: São Paulo 2026
                     </span>
                 </div>
                 
-                <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 12px;">
-                    <div style="font-size: 0.9rem; font-weight: 700; opacity: 0.4;">META</div>
-                    <!-- Termômetro Progressivo -->
-                    <div style="flex-grow: 1; height: 18px; background: rgba(0,0,0,0.4); border-radius: 9px; border: 1px solid rgba(197,160,89,0.25); overflow: hidden; display: flex; box-shadow: inset 0 2px 4px rgba(0,0,0,0.4);">
-                        <div style="width: 32%; background: linear-gradient(90deg, var(--gold-mid), var(--gold-light)); display: flex; align-items: center; justify-content: center; font-size: 0.65rem; color: #000; font-weight: 900;" title="Presenciais">32%</div>
-                        <div style="width: 68%; background: linear-gradient(90deg, #9c2a38, #c63b4b); display: flex; align-items: center; justify-content: center; font-size: 0.65rem; color: #FFF; font-weight: 700;" title="Online">68%</div>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;">
+                    <div class="glass-card" style="padding:25px; text-align:center; border-color: rgba(197,160,89,0.15); background: rgba(0,0,0,0.2);">
+                        <div style="font-size: 0.78rem; opacity: 0.7; text-transform: uppercase; letter-spacing:0.5px; margin-bottom:8px;">Presenciais Esperados</div>
+                        <div class="stat-number" data-target="700" style="font-size: 3.5rem; font-weight: 800; color: var(--gold-light); font-family:var(--font-heading);">0</div>
                     </div>
-                    <div style="font-size: 1.4rem; font-weight: 800; color: var(--gold-light); text-shadow: 0 0 10px rgba(232,202,148,0.15);">2.200</div>
-                </div>
-
-                <div style="display: flex; justify-content: space-between; font-size: 0.8rem; font-family: var(--font-body); max-width: 500px; margin: 0 auto; width: 100%;">
-                    <div style="text-align: left;">
-                        <span style="font-size: 1.1rem; font-weight: 800; color: var(--gold-mid);">700</span> 
-                        <span style="opacity: 0.7; font-size: 0.72rem; display: block;">Presenciais Esperados</span>
+                    <div class="glass-card" style="padding:25px; text-align:center; border-color: rgba(197,160,89,0.15); background: rgba(0,0,0,0.2);">
+                        <div style="font-size: 0.78rem; opacity: 0.7; text-transform: uppercase; letter-spacing:0.5px; margin-bottom:8px;">Online Esperados</div>
+                        <div class="stat-number" data-target="1500" style="font-size: 3.5rem; font-weight: 800; color: var(--gold-light); font-family:var(--font-heading);">0</div>
                     </div>
-                    <div style="text-align: center; font-size: 0.75rem; color: var(--gold-mid); font-style: italic; align-self: center; opacity: 0.6;">Público Geral Previsto</div>
-                    <div style="text-align: right;">
-                        <span style="font-size: 1.1rem; font-weight: 800; color: #e54254;">1.500</span> 
-                        <span style="opacity: 0.7; font-size: 0.72rem; display: block;">Online Esperados</span>
+                    <div class="glass-card" style="padding:25px; text-align:center; border-color: var(--gold-mid); background: radial-gradient(circle at top right, rgba(128,0,0,0.2), transparent); border-width: 1.5px;">
+                        <div style="font-size: 0.8rem; color: var(--gold-mid); text-transform: uppercase; font-weight:800; letter-spacing:1px; margin-bottom:8px;">PROJEÇÃO TOTAL</div>
+                        <div class="stat-number" data-target="2200" style="font-size: 3.8rem; font-weight: 900; color: #FFF; font-family:var(--font-heading); text-shadow: 0 0 20px rgba(128,0,0,0.3);">0</div>
                     </div>
                 </div>
             </div>
+
+        </div>
+    </section>
 
         </div>
     </section>
@@ -379,7 +445,7 @@
                         <li>Presença em materiais selecionados.</li>
                         <li>Distribuição de materiais promocionais.</li>
                     </ul>
-                    <a href="https://wa.me/5583981957737?text=Olá!%20Gostaria%20de%20conversar%20sobre%20a%20Cota%20Bronze%20do%20CIECC%202026." target="_blank" class="btn btn-secondary" style="width:100%;"><i class="fa-brands fa-whatsapp" style="margin-right:8px;"></i> Quero Bronze</a>
+                    <a href="#contato" class="btn btn-secondary" style="width:100%;"><i class="fa-solid fa-file-signature" style="margin-right:8px;"></i> Quero Bronze</a>
                 </div>
 
                 <!-- Cota Prata -->
@@ -394,7 +460,7 @@
                         <li>Presença em canais digitais oficiais.</li>
                         <li>Materiais e ações de relacionamento.</li>
                     </ul>
-                    <a href="https://wa.me/5583981957737?text=Olá!%20Gostaria%20de%20conversar%20sobre%20a%20Cota%20Prata%20do%20CIECC%202026." target="_blank" class="btn btn-secondary" style="width:100%;"><i class="fa-brands fa-whatsapp" style="margin-right:8px;"></i> Aderir Prata</a>
+                    <a href="#contato" class="btn btn-secondary" style="width:100%;"><i class="fa-solid fa-file-signature" style="margin-right:8px;"></i> Aderir Prata</a>
                 </div>
 
                 <!-- Cota Ouro -->
@@ -411,7 +477,7 @@
                         <li>Espaço físico e possibilidades de ativação.</li>
                         <li>Distribuição de brindes físicos na Plenária.</li>
                     </ul>
-                    <a href="https://wa.me/5583981957737?text=Olá!%20Gostaria%20de%20conversar%20sobre%20a%20Cota%20Ouro%20do%20CIECC%202026." target="_blank" class="btn btn-primary" style="width:100%;"><i class="fa-brands fa-whatsapp" style="margin-right:8px;"></i> Garantir Ouro</a>
+                    <a href="#contato" class="btn btn-primary" style="width:100%;"><i class="fa-solid fa-file-signature" style="margin-right:8px;"></i> Garantir Ouro</a>
                 </div>
             </div>
         </div>
@@ -513,6 +579,13 @@
 
                     <div style="grid-column: span 2; text-align: center; margin-top: 15px;">
                         <button type="submit" class="btn btn-primary" style="padding: 15px 40px; box-shadow: 0 0 20px rgba(197, 160, 89, 0.4);"><i class="fa-solid fa-paper-plane" style="margin-right: 8px;"></i> Enviar Solicitação</button>
+                    </div>
+
+                    <div style="grid-column: span 2; text-align: center; margin-top: 15px; border-top: 1px solid rgba(197,160,89,0.1); padding-top: 15px;">
+                        <p style="font-size: 0.78rem; color: var(--gold-mid); margin-bottom: 8px; opacity: 0.85;">Dúvidas? Fale direto com nosso Consultor Comercial:</p>
+                        <a href="https://wa.me/5583981957737?text=Olá!%20Já%20conheço%20o%20Mídia%20Kit%20e%20gostaria%20de%20falar%20com%20o%20comercial." target="_blank" style="font-size: 0.82rem; color: #FFF; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; background: rgba(37, 211, 102, 0.12); padding: 6px 16px; border-radius: 4px; border: 1px solid rgba(37, 211, 102, 0.3); transition: all 0.2s ease;" onmouseover="this.style.background='rgba(37, 211, 102, 0.2)'" onmouseout="this.style.background='rgba(37, 211, 102, 0.12)'">
+                            <i class="fa-brands fa-whatsapp" style="color: #25D366; font-size: 1.1rem;"></i> Chamar no WhatsApp
+                        </a>
                     </div>
                 </form>
             </div>
