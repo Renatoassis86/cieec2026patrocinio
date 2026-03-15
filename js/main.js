@@ -59,3 +59,59 @@ if (trackLand) {
   const cards = photos.map(img => `<div class="auto-slide land" style="background-image: url('imagens/${img}');"></div>`).join('');
   trackLand.innerHTML = cards + cards; // Duplicado para loop infinito
 }
+
+// --- INTEGRAÇÃO SUPABASE FORMULÁRIO ---
+const SUPABASE_URL = "https://sazzgguscgaxsgwszdii.supabase.co";
+const SUPABASE_KEY = "sb_publishable_ZyKymnZMebLykNX1WBJLRg_GxkSNDH8";
+
+const form = document.getElementById('patrocinioForm');
+if (form) {
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalText = submitBtn.innerHTML;
+    submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Enviando...';
+    submitBtn.disabled = true;
+
+    const data = {
+      nome: document.getElementById('lead_nome').value,
+      empresa: document.getElementById('lead_empresa').value,
+      cargo: document.getElementById('lead_cargo').value,
+      email: document.getElementById('lead_email').value,
+      whatsapp: document.getElementById('lead_whatsapp').value,
+      localizacao: document.getElementById('lead_localizacao').value,
+      interesse: document.getElementById('lead_interesse').value,
+      cota: document.getElementById('lead_cota').value,
+      mensagem: document.getElementById('lead_mensagem').value || ""
+    };
+
+    try {
+      const response = await fetch(`${SUPABASE_URL}/rest/v1/leads`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': SUPABASE_KEY,
+          'Authorization': `Bearer ${SUPABASE_KEY}`,
+          'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify(data)
+      });
+
+      if (response.ok) {
+        alert('✅ Mensagem enviada com sucesso! Nossa equipe entrará em contato em breve.');
+        form.reset();
+      } else {
+        const errorText = await response.text();
+        console.error('Supabase Error:', errorText);
+        throw new Error('Falha ao enviar os dados.');
+      }
+    } catch (error) {
+      console.error(error);
+      alert('❌ Erro ao enviar os dados. Por favor, tente novamente ou fale direto pelo WhatsApp.');
+    } finally {
+      submitBtn.innerHTML = originalText;
+      submitBtn.disabled = false;
+    }
+  });
+}
