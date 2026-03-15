@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Visualizador de Fotos</title>
+    <style>
+        body { background: #111; color: white; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; padding: 20px; font-family: sans-serif; }
+        .item { border: 1px solid #333; padding: 10px; text-align: center; background: #1a1a1a; }
+        img { max-width: 100%; height: 200px; object-fit: cover; border-radius: 4px; border: 1px solid #444; }
+        h4 { margin: 10px 0 0 0; font-size: 0.85rem; color: #999; }
+    </style>
+</head>
+<body>
+    <script>
+        const photos = [
+          'TRB_8011.jpg', 'TRB_8048.jpg', 'TRB_8055.jpg', 'TRB_8062.jpg', 'TRB_8168.jpg',
+          'TRB_8186.jpg', 'TRB_8222.jpg', 'TRB_8233.jpg', 'TRB_8250.jpg', 'TRB_8360.jpg',
+          'TRB_8402.jpg', 'TRB_8524.jpg', 'TRB_8575.jpg', 'TRB_8588.jpg', 'TRB_8599.jpg',
+          'TRB_8604.jpg', 'TRB_8624.jpg', 'TRB_8675.jpg', 'TRB_8715.jpg', 'TRB_8739.jpg',
+          'TRB_8782.jpg', 'TRB_8875.jpg', 'TRB_8991.jpg', 'TRB_9013.jpg', 'TRB_9026.jpg',
+          'TRB_9101.jpg', 'TRB_9366.jpg', 'TRB_9372.jpg', 'TRB_9410.jpg', 'TRB_9428.jpg',
+          'TRB_9461.jpg', 'TRB_9500.jpg', 'TRB_9505.jpg', 'TRB_9557.jpg', 'TRB_9559.jpg'
+        ];
+        photos.forEach(f => {
+            document.write(`<div class="item"><img src="imagens/${f}"><h4>${f}</h4></div>`);
+        });
+    </script>
+</body>
+</html>
