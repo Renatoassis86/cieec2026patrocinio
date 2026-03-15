@@ -122,6 +122,17 @@ p {
   to { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes pulse {
+  0% { transform: scale(0.95); opacity: 0.7; }
+  50% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0.7; }
+}
+
+.glowing-pin {
+  animation: pulse 2s infinite ease-in-out;
+  transform-origin: center;
+}
+
 section {
   padding: var(--gap-xl) 0;
   position: relative;
@@ -274,4 +285,109 @@ td i { color: var(--gold-mid); }
   .dashboard-grid, .sp-content, .audience-grid, .exp-grid, .cotas-grid { grid-template-columns: 1fr; }
   .sp-content { grid-template-columns: 1fr; }
   .hero-meta { flex-direction: column; align-items: center; gap: 8px; }
+}
+
+/* 11. Carrossel Automático Infinito */
+.infinite-carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-top: 40px;
+  background: rgba(0,0,0,0.1);
+  padding: 20px 0;
+  border-top: 1px solid rgba(197, 160, 89, 0.03);
+  border-bottom: 1px solid rgba(197, 160, 89, 0.03);
+}
+
+.infinite-track {
+  display: flex;
+  width: max-content;
+  gap: 15px;
+}
+
+.infinite-track.land { animation: marquee 120s linear infinite; }
+.infinite-track.port { animation: marquee-reverse 120s linear infinite; }
+
+.infinite-track:hover {
+  animation-play-state: paused;
+}
+
+.auto-slide {
+  flex-shrink: 0;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid rgba(197, 160, 89, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.auto-slide.land { width: 340px; height: 190px; }
+.auto-slide.port { width: 140px; height: 210px; }
+
+.auto-slide:hover {
+  transform: scale(1.05);
+  border-color: var(--gold-mid);
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+/* 11.5 Formulário de Captação Comercial */
+.form-input {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(197, 160, 89, 0.15);
+  padding: 14px 16px;
+  border-radius: 8px;
+  color: #FFF;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.form-input:focus {
+  border-color: var(--gold-mid);
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 12px rgba(197, 160, 89, 0.2);
+}
+
+.form-input::placeholder {
+  color: var(--gold-highlight);
+  opacity: 0.4;
+}
+
+select.form-input {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3Cpath fill='%23C5A059' d='M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 306.7 32.6 179.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 12px;
+}
+
+.form-label {
+  font-size: 0.75rem;
+  color: var(--gold-mid);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* Scroll e Glows no site */
+.active-section {
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
